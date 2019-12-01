@@ -39,7 +39,7 @@ class AuthController extends Controller
         'account' => $resp->account,
       ]);
 
-      return redirect('/dashboard');
+      return redirect('/ticket');
     } elseif ($resp->code == 403) {
       $resp403 = $resp->message;
       return redirect('/')->with('status',$resp403);
